@@ -7,7 +7,8 @@ DROP TABLE classes;
 
 CREATE TABLE memberships (
     id INTEGER PRIMARY KEY AUTOINCREMENT,
-    level VARCHAR(6) NOT NULL
+    level VARCHAR(6) NOT NULL,
+    description VARCHAR
 );
 
 CREATE TABLE members (
