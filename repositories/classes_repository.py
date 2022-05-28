@@ -14,12 +14,12 @@ def delete_all():
 
 def select(id):
     class1 = None
-    sql = "SELECT * FROM members WHERE id = ?"
+    sql = "SELECT * FROM classes WHERE id = ?"
     values = [id]
     result = run_sql(sql, values)[0]
 
     if result is not None:
-        class1 = Classes(result['name'], result['cap'], result['time'], result['id'])
+        class1 = Classes(result['name'], result['capacity'], result['time'], result['id'])
     return class1
 
 def select_all():

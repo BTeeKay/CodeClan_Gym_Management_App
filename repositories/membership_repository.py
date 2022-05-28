@@ -29,7 +29,7 @@ def select(id):
 def select_all():
     memberships = []
 
-    sql = "SELECT * FROM classes"
+    sql = "SELECT * FROM memberships"
     results = run_sql(sql)
     for row in results:
         class1 = Membership(row['level'], row['description'], row['id'])
