@@ -1,6 +1,6 @@
 from db.run_sql import run_sql
 from models.member import Member
-import membership_repository as membership_repo
+import repositories.membership_repository as membership_repo
 
 def save(member):
     sql = "INSERT INTO members (first_name, last_name, membership_id) VALUES ( ?, ?, ? ) RETURNING id"
@@ -20,7 +20,7 @@ def select(id):
     result = run_sql(sql, values)[0]
 
     if result is not None:
-        membership = membership_repo.select(result['membership.id'])
+        membership = membership_repo.select(result['membership_id'])
         member = Member(result['first_name'], result['last_name'], membership, result['id'])
     return member
 

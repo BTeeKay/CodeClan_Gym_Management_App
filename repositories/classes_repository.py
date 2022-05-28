@@ -21,3 +21,13 @@ def select(id):
     if result is not None:
         class1 = Classes(result['name'], result['cap'], result['time'], result['id'])
     return class1
+
+def select_all():
+    classes = []
+
+    sql = "SELECT * FROM classes"
+    results = run_sql(sql)
+    for row in results:
+        class1 = Classes(row['name'], row['capacity'], row['time'], row['id'])
+        classes.append(class1)
+    return classes

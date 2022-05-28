@@ -28,6 +28,8 @@ attending1 = Attend(member1, class1)
 attending1 = attending_repo.save(attending1)
 
 all_members = member_repo.select_all()
-print(all_members)
+all_classes = classes_repo.select_all()
+all_attending = attending_repo.select_all()
+all_membership = membership_repo.select_all()
 
 pdb.set_trace()
