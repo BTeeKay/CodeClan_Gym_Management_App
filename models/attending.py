@@ -1,5 +1,5 @@
-class Attending:
-    def __init__(self, memberid, classesid, id = None):
-        self.member_id = memberid
-        self.classes_id = classesid
+class Attend:
+    def __init__(self, member, classes, id = None):
+        self.member = member
+        self.classes = classes
         self.id = id
