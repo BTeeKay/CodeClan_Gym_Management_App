@@ -1,0 +1,12 @@
+{% extends "template.html" %}
+
+{% block content %}
+<ul>
+    {% for attend in attending %}
+        <li>{{ attend.member.first_name }} {{ attend.member.last_name }}
+            is going to {{ attend.classes.name }} {{ attend.classes.capacity }}
+            on {{ attend.classes.time}}
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}

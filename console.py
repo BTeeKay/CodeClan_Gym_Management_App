@@ -20,6 +20,8 @@ membership1 = membership_repo.save(membership1)
 
 member1 = Member("Bob", "Kerr", membership1)
 member1 = member_repo.save(member1)
+member2 = Member("Tina", "Kerr", membership1)
+member2 = member_repo.save(member2)
 
 class1 = Classes("Body Pump", 15, "2022-05-27 15:20")
 class1 = classes_repo.save(class1)

@@ -1,0 +1,9 @@
+{% extends "template.html" %}
+
+{% block content %}
+<ul>
+    {% for membership in memberships %}
+        <li>{{ membership.level}} {{ membership.description }}</li>
+    {% endfor %}
+</ul>
+{% endblock %}
