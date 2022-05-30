@@ -17,6 +17,8 @@ classes_repo.delete_all()
 
 membership1 = Membership("Platinum", "Is there going to be better than this?")
 membership1 = membership_repo.save(membership1)
+membership2 = Membership("Gold", "Not as good as Platinum")
+membership2 = membership_repo.save(membership2)
 
 member1 = Member("Bob", "Kerr", membership1)
 member1 = member_repo.save(member1)

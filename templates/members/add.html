@@ -1,0 +1,17 @@
+{% extends "template.html" %}
+
+{% block content %}
+<form action="/members/add" method="POST">
+    <label for="first_name">First Name</label>
+    <input type="text" name="first_name">
+    <label for="last_name">Last Name</label>
+    <input type="text" name="last_name">
+    <label for="memberships">Memberships</label>
+    <select name="memberships">
+        {% for membership in memberships %}
+        <option value="{{ membership.id }}">{{  membership.level }}</option>
+        {% endfor %}
+    </select>
+    <button type="submit">Submit</button>
+</form>
+{% endblock %}
