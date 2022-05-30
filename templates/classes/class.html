@@ -1,0 +1,13 @@
+{% extends "template.html" %}
+
+{% block content %}
+        <h1>{{ class1.name }} {{ class1.time }}</h1>
+        <a href="/classes/{{ class1.id }}/edit">Edit</a>
+        {% for peep in peeps %}
+            <ul>
+                <a href="/members/{{ peep.id }}">
+                <li>{{ peep.first_name }} {{ peep.last_name }}</li>
+                </a>
+            </ul>
+        {% endfor %}
+{% endblock %}

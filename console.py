@@ -30,6 +30,8 @@ class1 = classes_repo.save(class1)
 
 attending1 = Attend(member1, class1)
 attending1 = attending_repo.save(attending1)
+attending2 = Attend(member2, class1)
+attending2 = attending_repo.save(attending2)
 
 all_members = member_repo.select_all()
 all_classes = classes_repo.select_all()

@@ -38,3 +38,16 @@ def select(id):
         class1 = classes_repo.select(result['class_id'])
         attend = Attend(member, class1, result['id'])
     return member
+
+def select_class(id):
+    sql = "SELECT * FROM attending WHERE class_id = ?"
+    values = [id]
+    attendes = run_sql(sql, values)
+    persons = []
+
+    for attende in attendes:
+        person = member_repo.select(attende['member_id'])
+        persons.append(person)
+    
+    return persons
+

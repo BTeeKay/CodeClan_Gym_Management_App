@@ -11,7 +11,9 @@
 </header>
 <ul>
     {% for class in classes %}
-        <li>{{ class.name }} {{ class.capacity }}</li>
+        <a href="/classes/{{ class.id }}">
+        <li>{{ class.name }} {{ class.capacity }} {{ class.time }}</li>
+        </a>
     {% endfor %}
 </ul>
 {% endblock %}

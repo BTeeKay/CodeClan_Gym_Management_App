@@ -1,0 +1,14 @@
+{% extends "template.html" %}
+
+{% block content %}
+    <h1>Edit {{ class1.name }}</h1>
+    <form action="/classes/{{ class1.id }}/edit" method="POST">
+        <label for="name">Name</label>
+        <input type="text" name="name">
+        <label for="capacity">Capacity</label>
+        <input type="number" name="capacity">
+        <label for="time">Time</label>
+        <input type="datetime-local" name="time">
+        <button type="submit">Submit</button>
+    </form>
+{% endblock %}

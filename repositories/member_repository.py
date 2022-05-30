@@ -13,6 +13,11 @@ def delete_all():
     sql = "DELETE FROM members"
     run_sql(sql)
 
+def delete(id):
+    sql = "DELETE FROM members WHERE id = ?"
+    values = [id]
+    run_sql(sql, values)
+
 def select(id):
     member = None
     sql = "SELECT * FROM members WHERE id = ?"

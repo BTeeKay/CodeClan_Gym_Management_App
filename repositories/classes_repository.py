@@ -31,3 +31,8 @@ def select_all():
         class1 = Classes(row['name'], row['capacity'], row['time'], row['id'])
         classes.append(class1)
     return classes
+
+def update(class1):
+    sql = "UPDATE classes SET (name, capacity, time) = (?, ?, ?) WHERE id = ?"
+    values = [class1.name, class1.capacity, class1.time, class1.id]
+    run_sql(sql, values)

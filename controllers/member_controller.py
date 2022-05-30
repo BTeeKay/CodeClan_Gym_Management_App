@@ -32,6 +32,11 @@ def members_edit_edit(id):
     member_repo.update(member)
     return render_template("members/edit.html", title=f"Edit {member.first_name}", member=member)
 
+@members_blueprint.route("/members/<id>/delete")
+def members_delete(id):
+    member_repo.delete(id)
+    return redirect("/members")
+
 @members_blueprint.route("/members/add")
 def members_add():
     memberships = membership_repo.select_all()
