@@ -1,5 +1,6 @@
 from flask import Flask, render_template, request, redirect
 from flask import Blueprint
+from models.attending import Attend
 
 import repositories.attend_repository as attend_repo
 import repositories.classes_repository as classes_repo
@@ -41,3 +42,13 @@ def booking_view(id):
      class1=class1,
      availablemembers=available_members
      )
+
+@attending_blueprint.route("/classes/<id>/attend", methods=['POST'])
+def booking(id):
+    member_id = request.form['member_id']
+    print(request.form['member_id'])
+    member = member_repo.select(member_id)
+    class1 = classes_repo.select(id)
+    attend1 = Attend(member, class1)
+    attend_repo.save(attend1)
+    return redirect(f"/classes/{id}/attend")
