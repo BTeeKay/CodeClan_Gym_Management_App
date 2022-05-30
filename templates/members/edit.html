@@ -1,0 +1,17 @@
+{% extends "template.html" %}
+
+{% block content %}
+<h1> Edit {{ member.first_name }} {{ member.last_name }}</h1>
+
+<form action="/members/{{ member.id }}/edit" method="POST">
+    <label for="first_name">First Name</label>
+    <input type="text" name="first_name" value="{{ member.first_name }}">
+    <label for="last_name">Last Name</label>
+    <input type="text" name="last_name" value="{{ member.last_name }}">
+    <button type="submit">Submit</button>
+</form>
+
+{% if firstname != None %}
+{{ firstname }}
+{% endif %}
+{% endblock %}

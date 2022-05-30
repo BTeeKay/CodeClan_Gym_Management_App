@@ -1,6 +1,14 @@
 {% extends "template.html" %}
 
 {% block content %}
+<header>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/members">Members</a></li>
+        <li><a class="active" href="/classes">Classes</a></li>
+        <li><a href="/attending">Attending</a></li>
+    </ul> 
+</header>
 <ul>
     {% for class in classes %}
         <li>{{ class.name }} {{ class.capacity }}</li>

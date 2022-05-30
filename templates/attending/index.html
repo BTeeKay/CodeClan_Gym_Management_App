@@ -1,6 +1,14 @@
 {% extends "template.html" %}
 
 {% block content %}
+<header>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/members">Members</a></li>
+        <li><a href="/classes">Classes</a></li>
+        <li><a class="active" href="/attending">Attending</a></li>
+    </ul> 
+</header>
 <ul>
     {% for attend in attending %}
         <li>{{ attend.member.first_name }} {{ attend.member.last_name }}

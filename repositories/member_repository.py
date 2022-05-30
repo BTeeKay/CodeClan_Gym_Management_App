@@ -24,7 +24,6 @@ def select(id):
         member = Member(result['first_name'], result['last_name'], membership, result['id'])
     return member
 
-# need to get an instance of membership
 def select_all():
     members = []
 
@@ -34,3 +33,8 @@ def select_all():
         member = Member(row['first_name'], row['last_name'], row['membership_id'], row['id'])
         members.append(member)
     return members
+
+def update(member):
+    sql = "UPDATE members SET (first_name, last_name) = (?, ?) WHERE id = ?"
+    values = [member.first_name, member.last_name, member.id]
+    run_sql(sql, values)
