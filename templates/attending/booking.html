@@ -1,0 +1,23 @@
+{% extends "template.html" %}
+
+{% block content %}
+        <h1>{{ class1.name }} {{ class1.time }}</h1>
+        {% for attendee in attendees %}
+            <ul>
+                <a href="/members/{{ attendee.id }}">
+                <li>{{ attendee.first_name }} {{ attendee.last_name }}</li>
+                </a>
+            </ul>
+        {% endfor %}
+
+        <h4>Add someone?</h4>
+        <form action="/classes/{{ class1.id }}/attend" method="POST">
+            <label for="member_id">Member List</label>
+            <select name="member_id">
+                {% for amember in availablemembers %}
+                <option value="{{ member_id }}">{{ amember.first_name }} {{ amember.last_name }}</option>
+                {% endfor %} 
+            </select>
+            <button type="submit">Add</button>
+        </form>
+{% endblock %}

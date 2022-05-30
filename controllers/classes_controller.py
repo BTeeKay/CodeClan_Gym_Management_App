@@ -15,7 +15,7 @@ def classes():
 @classes_blueprint.route("/classes/<id>")
 def class_view(id):
     class1 = classes_repo.select(id)
-    peeps = attend_repo.select_class(id)
+    peeps = attend_repo.select_class_return_attendees(id)
     return render_template("classes/class.html", title=class1.name, class1=class1, peeps=peeps)
 
 @classes_blueprint.route("/classes/<id>/edit")

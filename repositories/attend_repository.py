@@ -39,7 +39,7 @@ def select(id):
         attend = Attend(member, class1, result['id'])
     return member
 
-def select_class(id):
+def select_class_return_attendees(id):
     sql = "SELECT * FROM attending WHERE class_id = ?"
     values = [id]
     attendes = run_sql(sql, values)
