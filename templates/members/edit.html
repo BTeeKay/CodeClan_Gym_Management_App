@@ -1,6 +1,15 @@
 {% extends "template.html" %}
 
 {% block content %}
+<header>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a class="active" href="/members">Members</a></li>
+        <li><a href="/classes">Classes</a></li>
+        <li><a href="/attending">Attending</a></li>
+    </ul> 
+</header>
+
 <h1> Edit {{ member.first_name }} {{ member.last_name }}</h1>
 
 <form action="/members/{{ member.id }}/edit" method="POST">

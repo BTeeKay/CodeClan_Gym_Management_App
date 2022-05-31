@@ -1,6 +1,16 @@
 {% extends "template.html" %}
 
 {% block content %}
+<header>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/members">Members</a></li>
+        <li><a class="active" href="/classes">Classes</a></li>
+        <li><a href="/attending">Attending</a></li>
+    </ul> 
+</header>
+
+    <div class="put words in here">
     <h1>Edit {{ class1.name }}</h1>
     <form action="/classes/{{ class1.id }}/edit" method="POST">
         <label for="name">Name</label>
@@ -11,4 +21,6 @@
         <input type="datetime-local" name="time" value="{{ class1.time }}">
         <button type="submit">Submit</button>
     </form>
+    </div>
+    
 {% endblock %}

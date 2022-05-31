@@ -4,16 +4,27 @@
 <header>
     <ul>
         <li><a href="/">Home</a></li>
-        <li><a class="active" href="/members">Members</a></li>
+        <li><a class="active"  href="/members">Members</a></li>
         <li><a href="/classes">Classes</a></li>
         <li><a href="/attending">Attending</a></li>
+        <li><a href="/memberships">Memberships</a></li>
     </ul> 
 </header>
-<ul>
-    {% for member in members %}
-        <a href="/members/{{ member.id }}">
-        <li>{{ member.first_name }} {{ member.last_name }}</li>
-        </a>
-    {% endfor %}
-</ul>
+
+<header class="secondary">
+    <ul>
+        <li><a class="active" href="/members">Member List</a></li>
+        <li><a href="/members/add">Add</a></li>
+    </ul> 
+</header>
+
+<div class="member-box">
+    <ul>
+        {% for member in members %}
+            <a href="/members/{{ member.id }}">
+            <li>{{ member.first_name }} {{ member.last_name }}</li>
+            </a>
+        {% endfor %}
+    </ul>
+</div>
 {% endblock %}

@@ -1,17 +1,36 @@
 {% extends "template.html" %}
 
 {% block content %}
-<form action="/members/add" method="POST">
-    <label for="first_name">First Name</label>
-    <input type="text" name="first_name">
-    <label for="last_name">Last Name</label>
-    <input type="text" name="last_name">
-    <label for="memberships">Memberships</label>
-    <select name="memberships">
-        {% for membership in memberships %}
-        <option value="{{ membership.id }}">{{  membership.level }}</option>
-        {% endfor %}
-    </select>
-    <button type="submit">Submit</button>
-</form>
+<header>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a class="active" href="/members">Members</a></li>
+        <li><a href="/classes">Classes</a></li>
+        <li><a href="/attending">Attending</a></li>
+    </ul> 
+</header>
+
+<header class="secondary">
+    <ul>
+        <li><a href="/members">Member List</a></li>
+        <li><a class="active" href="/members/add">Add</a></li>
+    </ul> 
+</header>
+
+<div class="member-form">
+    <form class="form-list-brian" action="/members/add" method="POST">
+        <label for="first_name">First Name</label>
+        <input type="text" name="first_name"><br>
+        <label for="last_name">Last Name</label>
+        <input type="text" name="last_name"><br>
+        <label for="memberships">Memberships</label>
+        <select name="memberships">
+            {% for membership in memberships %}
+            <option value="{{ membership.id }}">{{  membership.level }}</option>
+            {% endfor %}
+        </select>
+        <button type="submit">Submit</button>
+    </form>
+</div>
+
 {% endblock %}

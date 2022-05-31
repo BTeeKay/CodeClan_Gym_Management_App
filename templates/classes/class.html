@@ -1,6 +1,15 @@
 {% extends "template.html" %}
 
 {% block content %}
+<header>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/members">Members</a></li>
+        <li><a class="active" href="/classes">Classes</a></li>
+        <li><a href="/attending">Attending</a></li>
+    </ul> 
+</header>
+
         <h1>{{ class1.name }} {{ class1.time }}</h1>
         <a href="/classes/{{ class1.id }}/edit">Edit</a>
         {% for peep in peeps %}

@@ -34,8 +34,8 @@ def booking_view(id):
             available_members_ids.append(i)
     
     for i in available_members_ids:
-        pleasework = member_repo.select(i)
-        available_members.append(pleasework)
+        member = member_repo.select(i)
+        available_members.append(member)
 
     return render_template("attending/booking.html", title=f"{class1.name} Booking", members=members,
      attendees=attendees,

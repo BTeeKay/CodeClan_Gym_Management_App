@@ -1,0 +1,67 @@
+header > ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #4a5759;
+  }
+ 
+ul {
+  list-style-type: none;
+    margin: 10;
+    padding: 10;
+    overflow: hidden;
+}
+.secondary > ul {
+    background-color: #dedbd2;
+}  
+
+header > ul > li  {
+    float: left;
+  }
+ 
+li a {
+    display: block;
+    color: #EDAFDA;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover:not(.active) {
+    background-color: #111;
+  }
+  
+  .active {
+    background-color: #f25757;
+  }
+
+.member-box {
+  display: flex;
+  flex-flow: column;
+  text-align: center;
+}
+
+.member-form {
+  display: flex;
+  flex-flow: column;
+  flex-wrap: wrap;
+  text-align: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+form > input {
+  margin: 10px;
+}
+
+form > button {
+  margin: 10px;
+}
+
+.main-page {
+  display: flex;
+  flex-flow: column;
+  text-align: center;
+}
+

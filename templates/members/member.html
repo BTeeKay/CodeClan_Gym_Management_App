@@ -1,7 +1,18 @@
 {% extends "template.html" %}
 
 {% block content %}
-<h1>{{ member.first_name }} {{ member.last_name }}</h1>
-<a href="/members/{{ member.id }}/edit">Edit</a>
-<a href="/members/{{ member.id }}/delete">Delete</a>
+<header>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a class="active" href="/members">Members</a></li>
+        <li><a href="/classes">Classes</a></li>
+        <li><a href="/attending">Attending</a></li>
+    </ul> 
+</header>
+
+<div class="member-box">
+    <h1>{{ member.first_name }} {{ member.last_name }}</h1>
+    <a href="/members/{{ member.id }}/edit">Edit</a>
+    <a href="/members/{{ member.id }}/delete">Delete</a>
+</div>
 {% endblock %}
