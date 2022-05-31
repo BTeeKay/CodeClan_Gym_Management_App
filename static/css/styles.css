@@ -1,3 +1,9 @@
+/* body {
+  background: url('/static/images/background.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
+
 header > ul {
     list-style-type: none;
     margin: 0;

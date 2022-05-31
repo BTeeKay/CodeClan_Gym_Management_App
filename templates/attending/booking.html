@@ -10,6 +10,13 @@
     </ul> 
 </header>
 
+<header class="secondary">
+    <ul>
+        <li><a href="/classes/{{ class1.id }}/edit">Edit</a></li>
+        <li><a class="active" href="/classes/{{ class1.id  }}/attend">Add Member</a></li>
+    </ul>
+</header>
+
         <h1>{{ class1.name }} {{ class1.time }}</h1>
         {% for attendee in attendees %}
             <ul>

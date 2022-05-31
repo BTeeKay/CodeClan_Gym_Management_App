@@ -10,6 +10,13 @@
     </ul> 
 </header>
 
+<header class="secondary">
+    <ul>
+        <li><a class="active" href="/classes/{{ class1.id }}/edit">Edit</a></li>
+        <li><a href="/classes/{{ class1.id  }}/attend">Add Member</a></li>
+    </ul>
+</header>
+
     <div class="put words in here">
     <h1>Edit {{ class1.name }}</h1>
     <form action="/classes/{{ class1.id }}/edit" method="POST">

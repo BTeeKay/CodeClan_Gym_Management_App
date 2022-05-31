@@ -10,7 +10,15 @@
         <li><a href="/memberships">Memberships</a></li>
     </ul> 
 </header>
-<a href="/classes/add">Add a Class</a>
+
+<header class="secondary">
+    <ul>
+        <li><a class="active" href="/classes">Classes</a></li>
+        <li><a href="/classes/add">Add Class</a></li>
+    </ul>
+
+</header>
+
 <ul>
     {% for class in classes %}
         <a href="/classes/{{ class.id }}">
