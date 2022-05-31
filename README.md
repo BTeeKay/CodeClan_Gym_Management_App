@@ -1,5 +1,14 @@
 # CodeClan_Gym_Management_App
 
+### How to Run
+
+- After cloning the repo you need to first setup the database using
+- sqlite3 db/spending_tracker.db < db/spending_tracker.sql
+- I like to run this twice, just incase. After this we can populate the db slightly using
+- python console.py
+- after this we can run the app using
+- flask run 
+
 # BRIEF
 
 ### Gym
