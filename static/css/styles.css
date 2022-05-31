@@ -4,6 +4,13 @@
   background-size: cover;
 } */
 
+/* ask for help on this one
+*/
+.title {
+  border-style: ridge;
+  padding: 10px;
+  background-color: #EDAFDA;
+}
 header > ul {
     list-style-type: none;
     margin: 0;
