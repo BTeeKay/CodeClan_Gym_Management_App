@@ -13,16 +13,13 @@
 
 <header class="secondary">
     <ul>
-        <li><a class="active" href="/memberships">Membership List</a></li>
+        <li><a href="/memberships">Membership List</a></li>
+        <li><a class="active" href="/memberships/{{ membership.id }}">{{ membership.level }}</a></li>
         <li><a href="/memberships/add">Add Membership</a></li>
     </ul>
 </header>
-
-<ul>
-    {% for membership in memberships %}
-        <a href="/memberships/{{ membership.id }}">
-        <li>{{ membership.level}} {{ membership.description }}</li>
-        </a>
-    {% endfor %}
-</ul>
+<div class="member-box">
+        <h1>{{ membership.level}}</h1> 
+        <h4>{{ membership.description }}</h4>
+</div>
 {% endblock %}

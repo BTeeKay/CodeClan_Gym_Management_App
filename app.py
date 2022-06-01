@@ -17,10 +17,5 @@ app.register_blueprint(classes_blueprint)
 def home():
     return render_template('index.html', title="Home")
 
-# this is from stack overflow to stop the annoying flavicon stuff
-@app.route('/favicon.ico') 
-def favicon(): 
-    return send_from_directory(os.path.join(app.root_path, 'static'), 'favicon.ico', mimetype='image/vnd.microsoft.icon')
-
 if __name__ == '__main__':
     app.run(debug=True)

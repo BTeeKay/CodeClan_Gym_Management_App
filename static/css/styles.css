@@ -1,15 +1,18 @@
-/* body {
-  background: url('/static/images/background.jpeg');
+body {
+  /* background: url('/static/images/background.jpg');
   background-repeat: no-repeat;
   background-size: cover;
-} */
+  background-blend-mode:lighten; */
+  background-color: azure;
+}
 
 /* ask for help on this one
 */
 .title {
-  border-style: ridge;
+  display: flex;
+  text-align: center;
+  justify-content: center;
   padding: 10px;
-  background-color: #EDAFDA;
 }
 header > ul {
     list-style-type: none;
@@ -25,22 +28,24 @@ ul {
     padding: 10;
     overflow: hidden;
 }
+
 .secondary > ul {
-    background-color: #dedbd2;
+    background-color: #888786;
 }  
 
 header > ul > li  {
     float: left;
+    font-weight: bold;
   }
  
 li a {
     display: block;
-    color: #EDAFDA;
+    color: aqua;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
   }
-  
+
   li a:hover:not(.active) {
     background-color: #111;
   }
@@ -76,5 +81,9 @@ form > button {
   display: flex;
   flex-flow: column;
   text-align: center;
+}
+
+#jg {
+  color: azure;
 }
 

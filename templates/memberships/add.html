@@ -1,0 +1,31 @@
+{% extends "template.html" %}
+
+{% block content %}
+<header>
+    <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/members">Members</a></li>
+        <li><a href="/classes">Classes</a></li>
+        <li><a href="/attending">Attending</a></li>
+        <li><a class="active" href="/memberships">Memberships</a></li>
+    </ul> 
+</header>
+
+<header class="secondary">
+    <ul>
+        <li><a href="/memberships">Membership List</a></li>
+        <li><a class="active" href="/memberships/add">Add Membership</a></li>
+    </ul>
+</header>
+<div class="member-box">
+    <div class="member-form">
+    <form class="form-list-brian" action="/memberships/add" methods="POST">
+        <label for="level">Membership Name</label><br>
+        <input type="text" name="level"><br>
+        <label for="description">Membership Description</label><br>
+        <input type="text" name="description"><br>
+        <button type="submit">Add</button>
+    </form>
+</div>
+</div>
+{% endblock %}

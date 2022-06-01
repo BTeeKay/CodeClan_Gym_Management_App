@@ -1,3 +1,4 @@
+from datetime import datetime
 from flask import Flask, render_template, request, redirect
 from flask import Blueprint
 from models.attending import Attend
