@@ -1,4 +1,4 @@
-from flask import Flask, render_template, send_from_directory
+from flask import Flask, render_template
 import os
 
 from controllers.member_controller import members_blueprint
