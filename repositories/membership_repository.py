@@ -35,3 +35,8 @@ def select_all():
         class1 = Membership(row['level'], row['description'], row['id'])
         memberships.append(class1)
     return memberships
+
+def update(membership):
+    sql = "UPDATE memberships SET (level, description) = (?, ?) WHERE id = ?"
+    values = [membership.level, membership.description, membership.id]
+    run_sql(sql, values)

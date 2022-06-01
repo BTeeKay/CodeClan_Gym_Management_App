@@ -21,5 +21,7 @@
 <div class="member-box">
         <h1>{{ membership.level}}</h1> 
         <h4>{{ membership.description }}</h4>
+
+        <a href="/memberships/{{ membership.id }}/edit">Edit</a>
 </div>
 {% endblock %}

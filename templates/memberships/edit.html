@@ -14,18 +14,21 @@
 <header class="secondary">
     <ul>
         <li><a href="/memberships">Membership List</a></li>
-        <li><a class="active" href="/memberships/add">Add Membership</a></li>
+        <li><a class="active" href="/memberships/{{ membership.id }}/edit">Edit {{ membership.level }}</a></li>
+        <li><a href="/memberships/add">Add Membership</a></li>
     </ul>
 </header>
+
 <div class="member-box">
     <div class="member-form">
-    <form class="form-list-brian" action="/memberships/add" method="POST">
+    <form class="form-list-brian" action="/memberships/{{ membership.id }}/edit" method="POST">
         <label for="level">Membership Name</label><br>
-        <input type="text" name="level"><br>
+        <input type="text" value="{{ membership.level }}" name="level"><br>
         <label for="description">Membership Description</label><br>
-        <textarea name="description" rows="2" cols="30" ></textarea><br>
-        <button type="submit">Add</button>
+        <textarea name="description" rows="2" cols="30" >{{ membership.description }}</textarea><br>
+        <button type="submit">Edit</button>
     </form>
 </div>
 </div>
+
 {% endblock %}
